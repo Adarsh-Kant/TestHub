@@ -16,7 +16,7 @@ function Categories() {
 
   const fetchCategories = async () => {
 
-    const res = await axios.get("http://localhost:5000/api/categories");
+    const res = await axios.get("https://testhuboriginal.onrender.com/api/categories");
     setCategories(res.data);
 
   };
@@ -25,7 +25,7 @@ function Categories() {
 
     if(!newCategory) return;
 
-    await axios.post("http://localhost:5000/api/categories/add",{
+    await axios.post("https://testhuboriginal.onrender.com/api/categories/add",{
       name:newCategory
     });
 

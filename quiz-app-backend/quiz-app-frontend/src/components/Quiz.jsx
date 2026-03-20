@@ -20,7 +20,7 @@ function Quiz() {
 
   const fetchQuestions = async () => {
     const res = await axios.get(
-      `http://localhost:5000/api/questions/${categoryId}`
+      `https://testhuboriginal.onrender.com/api/questions/${categoryId}`
     );
     setQuestions(res.data);
   };
@@ -52,7 +52,7 @@ function Quiz() {
   const deleteQuestion = async (id) => {
 
     await axios.delete(
-      `http://localhost:5000/api/questions/${id}`
+      `https://testhuboriginal.onrender.com/api/questions/${id}`
     );
 
     fetchQuestions();
@@ -61,7 +61,7 @@ function Quiz() {
   const addQuestion = async () => {
 
     await axios.post(
-      "http://localhost:5000/api/questions/add",
+      "https://testhuboriginal.onrender.com/api/questions/add",
       {
         category: categoryId,
         question,
